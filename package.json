@@ -1,0 +1,24 @@
+{
+  "name": "ch-be-17070-desafio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon Server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quinterodiego/ch-BE-17070-desafio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quinterodiego/ch-BE-17070-desafio/issues"
+  },
+  "homepage": "https://github.com/quinterodiego/ch-BE-17070-desafio#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
