@@ -6,7 +6,7 @@ class Container {
         this.pathFile = path.join(__dirname, name)
     }
 
-    lastID = (listProducts) => {
+    lastID(listProducts) {
         let id = 0
 
         if(listProducts.length > 0) {
@@ -16,7 +16,7 @@ class Container {
         return id
     }
 
-    fileExists = async () => {
+    async fileExists() {
         try {
             await fs.access(this.pathFile)
             return true
@@ -25,7 +25,7 @@ class Container {
         }
     }
 
-    save = async (product) => {
+    async save(product) {
         try {
             const existsFile = await this.fileExists()
             if(!existsFile){
@@ -45,7 +45,7 @@ class Container {
         }
     }
 
-    getById = async (id) => {
+    async getById(id) {
         try {
             const products = await fs.readFile(this.pathFile, 'utf-8')
             const data = JSON.parse(products)
@@ -56,7 +56,7 @@ class Container {
         }
     }
 
-    getAll = async (id) => {
+    async getAll(id) {
         try {
             const products = await fs.readFile(this.pathFile, 'utf-8')
             const data = JSON.parse(products)
@@ -66,7 +66,7 @@ class Container {
         }
     }
 
-    deleteById = async (id) => {
+    async deleteById(id) {
         try {
             const products = await fs.readFile(this.pathFile, 'utf-8')
             const data = JSON.parse(products)
@@ -77,7 +77,7 @@ class Container {
         }
     }
 
-    deleteAll = async () => {
+    async deleteAll() {
         try {
             await fs.writeFile(this.pathFile, '[]', "utf8")
         } catch (error) {
