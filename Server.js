@@ -1,30 +1,15 @@
+const { urlencoded } = require('express')
 const express = require('express')
+const Container = require('./Contenedor')
+const productRouter = require('./Routes/products')
+
 const app = express()
 
-const Container = require('./Contenedor')
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+app.use(express.static('public'))
 
-const products = new Container('productos.json')
-
-app.get('/productos', async (req, res) => {
-    try {
-        const data = await products.getAll()
-        res.send(JSON.parse(data))
-    } catch (error) {
-        console.log(error)
-    }
-})
-
-app.get('/productoRandom', async (req, res) => {
-    try {
-        const str = await products.getAll()
-        const data = JSON.parse(str)
-        const idRandom = Math.floor(Math.random() * 3) + 1
-        const productoRandom = data.find((p) => p.id === idRandom)
-        res.send(productoRandom)
-    } catch (error) {
-        console.log(error)
-    }
-})
+app.use('/api/productos', productRouter)
 
 const PORT = process.env.PORT || 8080
 
