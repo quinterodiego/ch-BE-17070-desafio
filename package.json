@@ -19,6 +19,7 @@
   "homepage": "https://github.com/quinterodiego/ch-BE-17070-desafio#readme",
   "dependencies": {
     "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
     "nodemon": "^2.0.15"
   }
 }

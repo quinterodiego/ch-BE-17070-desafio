@@ -35,7 +35,7 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const { title, price, thumbnail } = req.body
-    const productID = await products.save({
+    await products.save({
         "title": title,
         "price": parseInt(price),
         "thumbnail": thumbnail
