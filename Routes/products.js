@@ -1,46 +1,57 @@
 const express = require('express')
-const Contenedor = require('./../Contenedor')
+const productsContainer = require('../models/Product')
 
 const { Router } = express
-const products = new Contenedor('productos.json')
-
+const products = new productsContainer('./../db/products.json')
 const router = Router()
 
 router.get('/', async (req, res) => {
-    try {
-        const data = await products.getAll()
-        res.send(JSON.parse(data))
-    } catch (error) {
-        console.log(error)
-    }
+    const productsList = await products.getAll()
+    res.render('index', { products: JSON.parse(productsList) })
 })
 
-router.get('/:id', async (req, res) => {
-    try {
-        const { id } = req.params
-        const product = await products.getById(parseInt(id))
+// router.get('/:id', async (req, res) => {
+//     try {
+//         const { id } = req.params
+//         const product = await products.getById(parseInt(id))
         
-        if(!product){
-            res.status(404).send({
-                error: "Producto no encontrado"
-            })
-            return
-        }
+//         if(!product){
+//             res.status(404).send({
+//                 error: "Producto noo encontrado"
+//             })
+//             return
+//         }
 
-        res.send(product)
-    } catch (error) {
-        console.log(error)
-    }
-})
+//         res.send(product)
+//     } catch (error) {
+//         console.log(error)
+//     }
+// })
 
-router.post('/', async (req, res) => {
+// -------------- PUG --------------
+// router.get('/add', (req, res) => res.render('addProduct'))
+
+// router.post('/add', async (req, res) => {
+//     const { title, price, thumbnail } = req.body
+//     await products.save({
+//         "title": title,
+//         "price": parseInt(price),
+//         "thumbnail": thumbnail
+//     })
+//     res.redirect('/add')
+// })
+
+// -------------- EJS --------------
+router.get('/add', (req, res) => res.render('addProduct'))
+
+router.post('/add', async (req, res) => {
     const { title, price, thumbnail } = req.body
     await products.save({
         "title": title,
         "price": parseInt(price),
         "thumbnail": thumbnail
     })
-    res.redirect('/')
+    res.redirect('/add')
 })
 
 router.put('/:id', async (req, res) => {

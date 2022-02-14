@@ -1,7 +1,7 @@
 const fs = require('fs').promises
 const path = require('path')
 
-class Container {
+class Product {
     constructor(name) {
         this.pathFile = path.join(__dirname, name)
     }
@@ -101,4 +101,4 @@ class Container {
     }
 }
 
-module.exports = Container
+module.exports = Product

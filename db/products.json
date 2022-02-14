@@ -52,5 +52,23 @@
     "price": 2500,
     "thumbnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwjdwMq1sez1AhUPg5EKHZTAA1sYABABGgJjZQ&sig=AOD64_2Db7vOqQg-00nDnK3kmZVSfncM1Q&adurl&ctype=5&ved=2ahUKEwiehLO1sez1AhXZN7kGHaUwDscQvhd6BAgBEFo",
     "id": 11
+  },
+  {
+    "title": "Cable UTP",
+    "price": 250,
+    "thumbnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwjdwMq1sez1AhUPg5EKHZTAA1sYABABGgJjZQ&sig=AOD64_2Db7vOqQg-00nDnK3kmZVSfncM1Q&adurl&ctype=5&ved=2ahUKEwiehLO1sez1AhXZN7kGHaUwDscQvhd6BAgBEFo",
+    "id": 12
+  },
+  {
+    "title": "Cable LIghthing",
+    "price": 1800,
+    "thumbnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwjdwMq1sez1AhUPg5EKHZTAA1sYABABGgJjZQ&sig=AOD64_2Db7vOqQg-00nDnK3kmZVSfncM1Q&adurl&ctype=5&ved=2ahUKEwiehLO1sez1AhXZN7kGHaUwDscQvhd6BAgBEFo",
+    "id": 13
+  },
+  {
+    "title": "Cargador de Pilas",
+    "price": 2500,
+    "thumbnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwjdwMq1sez1AhUPg5EKHZTAA1sYABABGgJjZQ&sig=AOD64_2Db7vOqQg-00nDnK3kmZVSfncM1Q&adurl&ctype=5&ved=2ahUKEwiehLO1sez1AhXZN7kGHaUwDscQvhd6BAgBEFo",
+    "id": 14
   }
 ]
