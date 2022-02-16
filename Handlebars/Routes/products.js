@@ -1,36 +1,18 @@
 const express = require('express')
-const Contenedor = require('./../Contenedor')
+const productsContainer = require('../models/Product')
 
 const { Router } = express
-const products = new Contenedor('productos.json')
-
+const products = new productsContainer('./../db/products.json')
 const router = Router()
 
-router.get('/', async (req, res) => {
-    try {
-        const data = await products.getAll()
-        res.send(JSON.parse(data))
-    } catch (error) {
-        console.log(error)
-    }
+router.get('/', (req, res) => {
+    res.status(200).render('main', { layout: 'index' });
 })
 
-router.get('/:id', async (req, res) => {
-    try {
-        const { id } = req.params
-        const product = await products.getById(parseInt(id))
-        
-        if(!product){
-            res.status(404).send({
-                error: "Producto no encontrado"
-            })
-            return
-        }
-
-        res.send(product)
-    } catch (error) {
-        console.log(error)
-    }
+router.get('/productos', async (req, res) => {
+    const productsAll = await products.getAll();
+    const productsParse = JSON.parse(productsAll)
+    res.render('main', { layout: 'productos', productsParse });
 })
 
 router.post('/', async (req, res) => {
