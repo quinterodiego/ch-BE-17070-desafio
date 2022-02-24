@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 router.get('/productos', async (req, res) => {
     const productsAll = await products.getAll();
     const productsParse = JSON.parse(productsAll)
-    res.render('main', { layout: 'productos', productsParse });
+    res.render('main', { layout: 'productos', productsParse })
 })
 
 router.post('/', async (req, res) => {
