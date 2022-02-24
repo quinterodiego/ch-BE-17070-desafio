@@ -1,0 +1,74 @@
+[
+  {
+    "nombre": "iMac",
+    "precio": "450000",
+    "url": "https://cdn2.iconfinder.com/data/icons/flat-pack-1/64/Computer-128.png",
+    "id": 1
+  },
+  {
+    "nombre": "iMac",
+    "precio": "5000",
+    "url": "https://cdn3.iconfinder.com/data/icons/business-258/64/_Tablet-128.png",
+    "id": 2
+  },
+  {
+    "nombre": "Celular",
+    "precio": "50000",
+    "url": "https://cdn1.iconfinder.com/data/icons/aami-web-internet/64/aami16-23-128.png",
+    "id": 3
+  },
+  {
+    "nombre": "iMac",
+    "precio": "10000",
+    "url": "https://cdn2.iconfinder.com/data/icons/flat-pack-1/64/Computer-128.png",
+    "id": 4
+  },
+  {
+    "nombre": "iMac",
+    "precio": "10000",
+    "url": "https://cdn2.iconfinder.com/data/icons/flat-pack-1/64/Computer-128.png",
+    "id": 5
+  },
+  {
+    "nombre": "Tablet",
+    "precio": "5000",
+    "url": "https://cdn3.iconfinder.com/data/icons/business-258/64/_Tablet-128.png",
+    "id": 6
+  },
+  {
+    "nombre": "Celular",
+    "precio": "450000",
+    "url": "https://cdn2.iconfinder.com/data/icons/flat-pack-1/64/Computer-128.png",
+    "id": 7
+  },
+  {
+    "nombre": "PC",
+    "precio": "10000",
+    "url": "https://cdn2.iconfinder.com/data/icons/flat-pack-1/64/Computer-128.png",
+    "id": 8
+  },
+  {
+    "nombre": "Monitor",
+    "precio": "120000",
+    "url": "https://cdn2.iconfinder.com/data/icons/flat-pack-1/64/Computer-128.png",
+    "id": 9
+  },
+  {
+    "nombre": "iMac",
+    "precio": "28000",
+    "url": "https://cdn2.iconfinder.com/data/icons/flat-pack-1/64/Computer-128.png",
+    "id": 10
+  },
+  {
+    "nombre": "Monitor",
+    "precio": "34000",
+    "url": "https://cdn3.iconfinder.com/data/icons/computer-technology-2/64/Projector-presentation-computer-technology-128.png",
+    "id": 11
+  },
+  {
+    "nombre": "iMac",
+    "precio": "5000",
+    "url": "https://cdn2.iconfinder.com/data/icons/flat-pack-1/64/Computer-128.png",
+    "id": 12
+  }
+]
