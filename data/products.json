@@ -70,5 +70,11 @@
     "precio": "5000",
     "url": "https://cdn2.iconfinder.com/data/icons/flat-pack-1/64/Computer-128.png",
     "id": 12
+  },
+  {
+    "nombre": "Disco SSD",
+    "precio": "8000",
+    "url": "https://cdn3.iconfinder.com/data/icons/business-258/64/_Tablet-128.png",
+    "id": 13
   }
 ]

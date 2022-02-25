@@ -8,7 +8,7 @@ const productosContenedor = new Contenedor('./data/products.json');
 
 productosRouter.get('/', async (req, res) => {
     const lista = await productosContenedor.getAll();
-    res.render('pages/productos', {
+    res.render('layouts/productos', {
     lista
     });
 });

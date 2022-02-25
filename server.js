@@ -1,9 +1,12 @@
 const express = require('express');
 const server = express();
+const path = require('path')
 
 const { createServer } = require('http');
 const { Server } = require('socket.io');
 const Contenedor = require('./Contenedor');
+
+const { engine } = require('express-handlebars')
 
 const { getMessages, saveMessage } = require('./data/chats.js');
 
@@ -15,8 +18,10 @@ server.use(express.urlencoded({ extended: true }));
 
 server.use( express.static('public') );
 
-
-server.set('view engine', 'ejs');
+server.engine('handlebars', engine({
+  layoutsDir: path.join(__dirname, 'views/layouts')
+}))
+server.set('view engine', 'handlebars')
 
 const PORT = 8080;
 const productosContenedor = new Contenedor('./data/products.json');
@@ -44,12 +49,12 @@ io.on('connection', async socket => {
 });
 
 server.get('/' , (req, res) => {
-  res.render('../views/pages/index')
+  res.status(200).render('main', { layout: 'index' });
 });
 
 server.get('/lista-productos', async (req, res) => {
   const lista = await productosContenedor.getAll();
-  res.render('../views/pages/lista-productos', {
+  res.render('../views/layouts/lista-productos', {
     message: 'success',
     data: lista
   });
