@@ -76,5 +76,21 @@
     "precio": "8000",
     "url": "https://cdn3.iconfinder.com/data/icons/business-258/64/_Tablet-128.png",
     "id": 13
+  },
+  {
+    "nombre": "Cable USB C",
+    "precio": "1800",
+    "url": "https://cdn2.iconfinder.com/data/icons/flat-pack-1/64/Computer-128.png",
+    "id": 14
+  },
+  {
+    "nombre": "Cable RJ45",
+    "descripcion": "Cat. 5",
+    "codigo": "3335",
+    "url": "https://cdn3.iconfinder.com/data/icons/business-258/64/_Tablet-128.png",
+    "precio": "1200",
+    "stock": "5",
+    "id": 15,
+    "timestamp": "5/3/2022 17:39:45"
   }
 ]

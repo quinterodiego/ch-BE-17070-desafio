@@ -9,15 +9,19 @@ class Contenedor {
 
         try{
             const data = await fs.promises.readFile(`./${this.file}`, 'utf-8');
-
+            const productos = JSON.parse(data);
             let listaProductos = [];
+
+            const d = new Date();
+            const date = [d.getDate(), d.getMonth() + 1, d.getFullYear()].join('/') + ' ' + [d.getHours(),d.getMinutes(),d.getSeconds()].join(':');
     
-            if(data === ''){
+            if(productos.length == 0){
                 producto.id = 1;
+                producto.timestamp = date;
                 listaProductos.push(producto);
             }else{       
-                const productos = JSON.parse(data);
                 producto.id = productos[productos.length - 1].id + 1;
+                producto.timestamp = date;
                 productos.push(producto);
                 listaProductos = productos;
             }
@@ -38,7 +42,6 @@ class Contenedor {
             const data = await fs.promises.readFile(`./${this.file}`, 'utf-8');
             const productos = JSON.parse(data);
             const productoEncontrado = productos.find(producto => producto.id === parseInt(id));
-            console.log('Producto: ', productoEncontrado);
             return productoEncontrado;
         } catch (error) {
             console.error('Error: ', error);

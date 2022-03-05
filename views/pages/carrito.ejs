@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <%- include('../partials/header'); %>
+        </header>
+        <main class="text-center">
+            <h2 class="h2 m-5 text-center">Carrito de Compras</h2>
+            <% if(typeof products != 'undefined'){ %>
+                <div class="d-flex flex-wrap">
+                    <% products.forEach((producto) => { %>
+                        <div class="card align-items-center flex-row m-2" style="width: 30%;">
+                            <img class="card-img-top w-25" src=<%=producto.url%> alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title"><b>Nombre:</b> <%= producto.nombre %></h3>
+                                <h5 class="card-title"><b>Precio:</b> <%= producto.precio %></h5>
+                                <h5 class="card-title"><b>Stock:</b> <%= producto.stock %></h5>
+                                <a class="btn"><i class="fas fa-trash-alt text-primary h4"></i></a>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+            <% } else{ %>  
+            <h3>Ouch! No hay productos cargados</h3>
+            <img class="w-25 m-5" src="https://cdn-icons-png.flaticon.com/512/872/872648.png" alt="">
+            <% } %>
+        </main>
+        <footer class="mt-2">
+            <%- include('../partials/footer'); %>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
