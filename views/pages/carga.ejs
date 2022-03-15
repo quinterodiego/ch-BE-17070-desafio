@@ -24,8 +24,8 @@
                     <input type="text" class="form-control" id="codigo" name="codigo" aria-describedby="emailHelp">
                 </div>
                 <div class="form-group">
-                    <label for="url">URL Imagen</label>
-                    <input type="text" class="form-control" id="url" name="url" aria-describedby="emailHelp">
+                    <label for="url_imagen">URL Imagen</label>
+                    <input type="text" class="form-control" id="url_imagen" name="url_imagen" aria-describedby="emailHelp">
                 </div>
                 <div class="form-group">
                     <label for="precio">Precio</label>
@@ -37,6 +37,22 @@
                 </div>
                 <button type="submit" class="btn btn-primary mt-3 mb-3">CARGAR</button>
             </form>
+            <hr>
+            <h3>Chats de Usuarios</h3>
+            <form id="formChats" class="m-3" style="width: 100%;">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Mensaje</label>
+                    <input type="text" class="form-control" id="mensaje" name="mensaje" aria-describedby="emailHelp">
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+            <br>
+            <h3>Mensajes</h3>
+            <div id="messages"></div>
         </main>
         <footer class="mt-2">
             <%- include('../partials/footer'); %>

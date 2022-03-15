@@ -7,7 +7,7 @@ cargaRouter.post('/', isAdmin, async (req, res) => {
     const newProduct = req.body;
     const productoSavedID = await addProduct(newProduct);
     console.log('Producto agregado - ID: ', productoSavedID);
-    res.redirect('http://localhost:8080/productos');
+    res.redirect('http://localhost:3000/productos');
 });
 
 module.exports = cargaRouter;
